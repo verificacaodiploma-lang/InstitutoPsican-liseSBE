@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Instituto de Psicanálise Saúde e Bem-Estar — Verificação de Registro</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
     body {
       font-family: Arial, sans-serif;
       background: #f4f6fb;
@@ -19,7 +22,7 @@
     }
     h1 {
       text-align: center;
-      color: #2e7d32; /* verde institucional */
+      color: #2e7d32;
       margin-bottom: 6px;
     }
     .subtitulo {
@@ -68,25 +71,35 @@
       color: #777;
       text-align: center;
     }
-  </style></head><body>  <div class="card">
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
     <h1>Verificação de Registro</h1>
-    <div class="subtitulo">Instituto de Psicanálise, Saúde e Bem-Estar</div><input id="busca" placeholder="Digite o número do registro">
-<button onclick="buscarRegistro()">Pesquisar</button>
+    <div class="subtitulo">
+      Instituto de Psicanálise, Saúde e Bem-Estar
+    </div>
 
-<div id="resultado">
-  <div class="linha"><strong>Nome:</strong> <span id="nome"></span></div>
-  <div class="linha"><strong>Instituição:</strong> <span id="instituicao"></span></div>
-  <div class="linha"><strong>Formação:</strong> <span id="curso"></span></div>
-  <div class="linha"><strong>Conclusão:</strong> <span id="conclusao"></span></div>
-  <div class="linha"><strong>Registro:</strong> <span id="registro"></span></div>
-  <div class="linha"><strong>Situação:</strong> <span id="situacao" class="situacao"></span></div>
-</div>
+    <input id="busca" placeholder="Digite o número do registro">
+    <button onclick="buscarRegistro()">Pesquisar</button>
 
-<div class="rodape">
-  Documento para fins de verificação institucional
-</div>
+    <div id="resultado">
+      <div class="linha"><strong>Nome:</strong> <span id="nome"></span></div>
+      <div class="linha"><strong>Instituição:</strong> <span id="instituicao"></span></div>
+      <div class="linha"><strong>Formação:</strong> <span id="curso"></span></div>
+      <div class="linha"><strong>Conclusão:</strong> <span id="conclusao"></span></div>
+      <div class="linha"><strong>Registro:</strong> <span id="registro"></span></div>
+      <div class="linha"><strong>Situação:</strong> <span id="situacao" class="situacao"></span></div>
+    </div>
 
-  </div>  <script>
+    <div class="rodape">
+      Documento para fins de verificação institucional
+    </div>
+  </div>
+
+  <script>
     function buscarRegistro(){
       const valor = document.getElementById('busca').value.trim();
       const resultado = document.getElementById('resultado');
@@ -98,6 +111,14 @@
           curso: "Formação em Psicanálise",
           conclusao: "19/06/2022",
           registro: "474556-77",
+          situacao: "Regular"
+        },
+        "464566-64": {
+          nome: "Ieda Cardoso da Silva",
+          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
+          curso: "Formação em Psicanálise",
+          conclusao: "15/06/2022",
+          registro: "464566-64",
           situacao: "Regular"
         }
       };
@@ -118,5 +139,7 @@
 
       resultado.style.display = "block";
     }
-  </script></body>
+  </script>
+
+</body>
 </html>

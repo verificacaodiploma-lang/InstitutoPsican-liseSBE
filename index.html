@@ -48,9 +48,6 @@
       border-radius: 6px;
       cursor: pointer;
     }
-    button:hover {
-      opacity: 0.9;
-    }
     #resultado {
       margin-top: 22px;
       display: none;
@@ -76,112 +73,84 @@
 
 <body>
 
-  <div class="card">
-    <h1>Verificação de Registro</h1>
-    <div class="subtitulo">
-      Instituto de Psicanálise, Saúde e Bem-Estar
-    </div>
-
-    <input id="busca" placeholder="Digite o número do registro">
-    <button onclick="buscarRegistro()">Pesquisar</button>
-
-    <div id="resultado">
-      <div class="linha"><strong>Nome:</strong> <span id="nome"></span></div>
-      <div class="linha"><strong>Instituição:</strong> <span id="instituicao"></span></div>
-      <div class="linha"><strong>Formação:</strong> <span id="curso"></span></div>
-      <div class="linha"><strong>Conclusão:</strong> <span id="conclusao"></span></div>
-      <div class="linha"><strong>Registro:</strong> <span id="registro"></span></div>
-      <div class="linha"><strong>Situação:</strong> <span id="situacao" class="situacao"></span></div>
-    </div>
-
-    <div class="rodape">
-      Documento para fins de verificação institucional
-    </div>
+<div class="card">
+  <h1>Verificação de Registro</h1>
+  <div class="subtitulo">
+    Instituto de Psicanálise, Saúde e Bem-Estar
   </div>
 
-  <script>
-    function buscarRegistro(){
-      const valor = document.getElementById('busca').value.trim();
-      const resultado = document.getElementById('resultado');
+  <input id="busca" placeholder="Digite o número do registro">
+  <button onclick="buscarRegistro()">Pesquisar</button>
 
-      const registros = {
-        "474556-77": {
-          nome: "Maria Fernanda Palhares",
-          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
-          curso: "Formação em Psicanálise",
-          conclusao: "19/06/2022",
-          registro: "474556-77",
-          situacao: "Regular"
-        },
-        "464566-64": {
-          nome: "Ieda Cardoso da Silva",
-          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
-          curso: "Formação em Psicanálise",
-          conclusao: "15/06/2022",
-          registro: "464566-64",
-          situacao: "Regular"
-        },
-        "464456-76": {
-          nome: "Luiz Gustavo dos Santos Chrispino",
-          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
-          curso: "Formação em Constelação Familiar e Sistêmica",
-          conclusao: "27/10/2021",
-          registro: "464456-76",
-          situacao: "Regular"
-        },
-        "354455-76": {
-          nome: "Luiz Gustavo dos Santos Chrispino",
-          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
-          curso: "Formação em Terapia Holística",
-          conclusao: "27/10/2021",
-          registro: "354455-76",
-          situacao: "Regular"
-        },
-        "366567-87": {
-          nome: "Epfânia dos Santos Silva",
-          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
-          curso: "Formação em Psicanálise Clínica",
-          conclusao: "13/06/2025",
-          registro: "366567-87",
-          situacao: "Regular"
-        },
+  <div id="resultado">
+    <div class="linha"><strong>Nome:</strong> <span id="nome"></span></div>
+    <div class="linha"><strong>Instituição:</strong> <span id="instituicao"></span></div>
+    <div class="linha"><strong>Formação:</strong> <span id="curso"></span></div>
+    <div class="linha"><strong>Conclusão:</strong> <span id="conclusao"></span></div>
+    <div class="linha"><strong>Registro:</strong> <span id="registro"></span></div>
+    <div class="linha"><strong>Situação:</strong> <span id="situacao" class="situacao"></span></div>
+  </div>
 
-        /* NOVOS REGISTROS */
-        "36322-87": {
-          nome: "Rosa Maria Dias Batista Cinque",
-          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
-          curso: "Formação em Psicanálise Clínica",
-          conclusao: "05/06/2023",
-          registro: "36322-87",
-          situacao: "Regular"
-        },
-        "3447888-08": {
-          nome: "Rosa Maria Dias Batista Cinque",
-          instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
-          curso: "Doutorado em Psicanálise Clínica",
-          conclusao: "17/04/2023",
-          registro: "3447888-08",
-          situacao: "Regular"
-        }
-      };
+  <div class="rodape">
+    Documento para fins de verificação institucional
+  </div>
+</div>
 
-      if(!registros[valor]){
-        alert("Registro não localizado.");
-        resultado.style.display = "none";
-        return;
-      }
+<script>
+function buscarRegistro() {
+  const valor = document.getElementById('busca').value.trim();
+  const resultado = document.getElementById('resultado');
 
-      const dados = registros[valor];
-      document.getElementById("nome").innerText = dados.nome;
-      document.getElementById("instituicao").innerText = dados.instituicao;
-      document.getElementById("curso").innerText = dados.curso;
-      document.getElementById("conclusao").innerText = dados.conclusao;
-      document.getElementById("registro").innerText = dados.registro;
-      document.getElementById("situacao").innerText = dados.situacao;
+  const registros = {
 
-      resultado.style.display = "block";
+    /* ROSA MARIA – FORMAÇÃO */
+    "36689064-22": {
+      nome: "Rosa Maria Dias Batista Cinque",
+      instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
+      curso: "Formação em Psicanálise Clínica",
+      conclusao: "21/11/2021",
+      registro: "36689064-22",
+      situacao: "Regular"
+    },
+
+    /* ROSA MARIA – MESTRADO */
+    "24333-22": {
+      nome: "Rosa Maria Dias Batista Cinque",
+      instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
+      curso: "Mestrado em Psicanálise Clínica",
+      conclusao: "15/09/2022",
+      registro: "24333-22",
+      situacao: "Regular"
+    },
+
+    /* ROSA MARIA – DOUTORADO */
+    "2578874-08": {
+      nome: "Rosa Maria Dias Batista Cinque",
+      instituicao: "Instituto de Psicanálise Saúde e Bem-Estar",
+      curso: "Doutorado em Psicanálise Clínica",
+      conclusao: "17/04/2023",
+      registro: "2578874-08",
+      situacao: "Regular"
     }
-  </script>
+  };
+
+  if (!registros[valor]) {
+    alert("Registro não localizado.");
+    resultado.style.display = "none";
+    return;
+  }
+
+  const dados = registros[valor];
+  document.getElementById("nome").innerText = dados.nome;
+  document.getElementById("instituicao").innerText = dados.instituicao;
+  document.getElementById("curso").innerText = dados.curso;
+  document.getElementById("conclusao").innerText = dados.conclusao;
+  document.getElementById("registro").innerText = dados.registro;
+  document.getElementById("situacao").innerText = dados.situacao;
+
+  resultado.style.display = "block";
+}
+</script>
 
 </body>
 </html>

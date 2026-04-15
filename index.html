@@ -101,15 +101,10 @@ Instituto de Psicanálise, Saúde e Bem-Estar
 <div id="resultado">
 
 <div class="linha"><strong>Nome:</strong> <span id="nome"></span></div>
-
 <div class="linha"><strong>Instituição:</strong> <span id="instituicao"></span></div>
-
 <div class="linha"><strong>Formação:</strong> <span id="curso"></span></div>
-
 <div class="linha"><strong>Conclusão:</strong> <span id="conclusao"></span></div>
-
 <div class="linha"><strong>Registro:</strong> <span id="registro"></span></div>
-
 <div class="linha"><strong>Situação:</strong> <span id="situacao" class="situacao"></span></div>
 
 </div>
@@ -121,7 +116,6 @@ Documento para fins de verificação institucional
 </div>
 
 <script>
-
 function buscarRegistro(){
 
 const valor = document.getElementById('busca').value.trim();
@@ -167,6 +161,16 @@ curso:"Formação Farmacêutica",
 conclusao:"13/02/2026",
 registro:"26764336-88",
 situacao:"Regular"
+},
+
+/* WILLIAN – SOCORRISTA */
+"367755-88":{
+nome:"Willian Costa Francisco",
+instituicao:"Instituto de Psicanálise Saúde e Bem-Estar",
+curso:"Curso Socorrista",
+conclusao:"23/06/2025",
+registro:"367755-88",
+situacao:"Regular"
 }
 
 };
@@ -187,9 +191,7 @@ document.getElementById("registro").innerText = dados.registro;
 document.getElementById("situacao").innerText = dados.situacao;
 
 resultado.style.display="block";
-
 }
-
 </script>
 
 </body>
